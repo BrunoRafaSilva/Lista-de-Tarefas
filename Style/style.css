@@ -1,0 +1,197 @@
+/* Adiciona fonte personalizada */
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+/* Adiciona parametros globais de estilo e também define que caso não consiga carregar a fonte importada, utilizar uma fonte do tipo 'cursive' */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tilt Neon", cursive;
+}
+
+/* Define que o elemento deve ser flexivel, permitindo alinhação de linhas ou colunas dos conteiners presentes dentro dele e alinhando horizontalmente(centralizando o conteudo */
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #d8dbe2;
+}
+
+/* Define parametros de estilo para a tag `p` como posição, cor, tamanho e estilo */
+p {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: beige;
+  text-decoration: none;
+}
+
+/* Organização da lista como flexivel, define que novos elementos sempre seram o topo da lista(invertendo o padrão) e define uma distancia entre os itens da lista*/
+ul {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+}
+
+/* Define localização da lixeira que irá limpar todos os itens */
+.clearList {
+  position: absolute;
+  right: 18%;
+  margin-top: -30px;
+}
+
+/* Define o tamanho do icone da lixeira presente no cabeçalho da div */
+.header i {
+  font-size: 22px;
+}
+
+/* Definições de altura e largura da div central */
+.container {
+  margin-top: 40px;
+  width: 70%;
+  background-color: #58a4b0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Definições de estilo da div que guarda o `input:text` e o botão de adicionar novos itens */
+.listInsert {
+  padding: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 6px 5px 10px 0px grey;
+}
+
+/* Definições de estilo da `input:text` */
+.textInsert {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  width: 90%;
+}
+
+/* Definições gerais da tag `button` */
+button {
+  width: 10%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Estilização do botão de adicionar novos itens à lista */
+.bx-plus {
+  font-size: 35px;
+  margin-left: 10px;
+  background-color: #6ab493;
+  border-radius: 50%;
+  padding: 5px;
+  color: white;
+}
+
+/* Definições de estilos do item da lista que será adicionado dinamicamente */
+.divLi {
+  margin-top: 20px;
+  padding: 10px;
+  background: lightgray;
+  border-radius: 10px;
+  box-shadow: 6px 5px 10px 0px grey;
+  display: flex;
+  align-items: center;
+}
+
+/* Personalização da `div` que será inserida dinamicamente */
+.divLi span {
+  width: 80%;
+  color: rgb(41, 19, 19);
+  margin-left: 20px;
+}
+
+/* Estilizações gerais da checkbox */
+.divLi input {
+  width: 10%;
+  outline: none;
+  accent-color: currentcolor;
+  appearance: none; /* Remove a aparência padrão */
+  background-color: white;
+  margin-left: 0px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Estilize a caixa de seleção quando ela estiver marcada */
+.divLi input:checked {
+  background-color: red;
+}
+
+/* Estilização da lixeira presente em cada item adicionado dinamicamente */
+.divLi i {
+  font-size: 22px;
+  color: brown;
+  position: absolute;
+  right: 18%;
+  margin-top: -12px;
+  margin-right: 15px; /* Define a posição como absoluta */
+}
+
+/* Remove a marcador dos itens da lista */
+li {
+  list-style-type: none;
+}
+
+/* Alterar a cor do texto quando o item estivar com o atributo de `.line-trough`. */
+li .divLi > .line-through {
+  color: red;
+  text-decoration: line-through;
+}
+
+/* Estilização para que o site funcione em outros dispositivos */
+@media (max-width: 900px) {
+  input {
+    width: 70%;
+  }
+
+  container {
+    width: 90%;
+  }
+
+  .listInsert button {
+    width: 30%;
+  }
+
+  i {
+    font-size: 30px;
+    padding: 0px;
+  }
+
+  p {
+    font-size: x-large;
+  }
+}
+
+/* Estilizações referentes ao rodapé da página*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #59A4B0;
+}
+
+footer span {
+  display: inline-block;
+  text-align: center;
+  font-family: Helvetica, sans-serif ;
+}
+
+footer a{
+  text-decoration: none;
+  color: rgb(2, 55, 90);;
+}

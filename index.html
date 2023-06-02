@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="Style/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="shortcut icon" href="Icon/icons8-journal-ios-16-glyph-32.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!– Criação da `div` cuja aplicação ficará centralizada –>
+    <div class="container">
+
+      <!– Criação de uma `class header` definindo assim o cabeçalho da div central –>
+        <div class="header">
+          <p>LISTA DE TAREFAS</p>
+
+          <!– Botão de lixeira para apagar os conteudos já inseridos e limpar o `localStorage` –>
+            <button class='clearList'><i class='bx bxs-trash' tytle="Apagar tudo" id="clearListButton"></i></button>
+        </div>
+
+        <!– Quebra de linha –>
+          <br />
+
+          <!– `div` que irá armazenar o campo de texto e botão de adicionar novas tarefas –>
+            <div class="listInsert">
+              <input class="textInsert" id="textField" type="text" placeholder="Digite aqui." />
+              <button id="addButton"><i class='bx bx-plus'></i></button>
+            </div>
+
+            <!– Criada uma lista não ordenada, pois irá possibilitar que sempre que um novo item seja adiciona, ele
+              entre no topo da lista `column-reverse`(presente no arquivo CSS) –>
+              <ul></ul>
+    </div>
+
+    <!- Rodapé ->
+      <footer>
+        <span>Site desenvolvido por <a href="https://github.com/BrunoRafaSilva" target="_blank">Bruno Silva <i
+              class='bx bxl-github'></i></a></span>
+      </footer>
+      <!– A referência do arquivo script está no final para que ele seja carregado por último, evitando erros durante
+        captura de eventos `EventListener` –>
+        <script src="Script/script.js"></script>
+</body>
+
+</html>
